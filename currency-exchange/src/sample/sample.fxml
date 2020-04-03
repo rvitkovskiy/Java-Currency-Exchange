@@ -1,0 +1,53 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10" style="-fx-background-color: rgb(0, 102, 102)">
+
+
+    <HBox spacing="10" alignment="center"
+          GridPane.columnIndex="0" GridPane.rowIndex="2">
+
+        <VBox >
+            <Text fx:id="modificationDate"/>
+            <Button minWidth="205" minHeight="35" text="Aktualizuj dane" style="-fx-color:rgb(0, 179, 179)" fx:id="updateButton"
+                    onAction="#dataUpdate"/>
+        </VBox>
+
+
+        <VBox>
+
+            <TextField minWidth="150" promptText="Kwota" style="-fx-color:rgb(0, 179, 179)" fx:id="value" />
+            <ComboBox minWidth="150" style="-fx-color:rgb(0, 255, 255)" fx:id="fromComboBox" >
+
+            </ComboBox >
+
+
+        </VBox>
+
+
+        <VBox>
+            <TextField minWidth="150" fx:id="result" />
+            <ComboBox minWidth="150" style="-fx-color:rgb(0, 255, 255)" fx:id="toComboBox" >
+
+            </ComboBox>
+
+        </VBox>
+
+
+        <Button minHeight="50" text="Przelicz" style="-fx-color:rgb(0, 179, 179)" fx:id="calculateButton"
+                onAction="#calculateExchangeRates"/>
+
+
+    </HBox>
+
+
+
+</GridPane>

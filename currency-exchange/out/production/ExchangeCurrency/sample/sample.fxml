@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="center" hgap="10" style="-fx-background-color: rgb(0, 102, 102)" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.121" fx:controller="sample.Controller">
+
+
+    <HBox alignment="center" spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="2">
+
+        <VBox>
+            <Text fx:id="modificationDate">
+            <font>
+               <Font name="Franklin Gothic Book Italic" size="12.0" />
+            </font></Text>
+            <Button fx:id="updateButton" minHeight="35" minWidth="205" onAction="#dataUpdate" style="-fx-color:rgb(0, 179, 179)" text="Aktualizuj dane">
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+            <font>
+               <Font name="Franklin Gothic Book" size="12.0" />
+            </font></Button>
+        </VBox>
+
+
+        <VBox>
+
+            <TextField fx:id="value" minWidth="150" promptText="Kwota" style="-fx-color:rgb(0, 179, 179)" />
+            <ComboBox fx:id="fromComboBox" minWidth="150" style="-fx-color:rgb(0, 255, 255)">
+
+            </ComboBox>
+
+
+        </VBox>
+
+
+        <VBox>
+            <TextField fx:id="result" editable="false" minWidth="150" />
+            <ComboBox fx:id="toComboBox" minWidth="150" style="-fx-color:rgb(0, 255, 255)">
+
+            </ComboBox>
+
+        </VBox>
+
+
+        <Button fx:id="calculateButton" minHeight="50" onAction="#calculateExchangeRates" style="-fx-color:rgb(0, 179, 179)" text="Przelicz">
+         <font>
+            <Font name="Franklin Gothic Book" size="12.0" />
+         </font></Button>
+
+
+    </HBox>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+
+
+
+</GridPane>
